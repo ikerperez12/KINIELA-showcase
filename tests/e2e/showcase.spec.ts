@@ -1,14 +1,14 @@
 import AxeBuilder from '@axe-core/playwright'
-import { expect, test, type Page } from '@playwright/test'
+import { expect, test, type BrowserContext } from '@playwright/test'
 
 const isolatedOrigin = 'http://127.0.0.1:4173'
-const unexpectedRequestsByPage = new WeakMap<Page, string[]>()
+const unexpectedRequestsByContext = new WeakMap<BrowserContext, string[]>()
 
-test.beforeEach(async ({ page }) => {
+test.beforeEach(async ({ context }) => {
   const unexpectedRequests: string[] = []
-  unexpectedRequestsByPage.set(page, unexpectedRequests)
+  unexpectedRequestsByContext.set(context, unexpectedRequests)
 
-  await page.route('**/*', async (route) => {
+  await context.route('**/*', async (route) => {
     const url = new URL(route.request().url())
     if ((url.protocol === 'http:' || url.protocol === 'https:') && url.origin !== isolatedOrigin) {
       unexpectedRequests.push(url.href)
@@ -17,12 +17,15 @@ test.beforeEach(async ({ page }) => {
     }
     await route.continue()
   })
-  page.on('websocket', (socket) => unexpectedRequests.push(socket.url()))
+  await context.routeWebSocket('**/*', async (socket) => {
+    unexpectedRequests.push(socket.url())
+    await socket.close({ code: 1008, reason: 'The showcase demo is offline' })
+  })
 })
 
-test.afterEach(async ({ page }) => {
+test.afterEach(async ({ page, context }) => {
   await expect(page.locator('iframe')).toHaveCount(0)
-  expect(unexpectedRequestsByPage.get(page) ?? []).toEqual([])
+  expect(unexpectedRequestsByContext.get(context) ?? []).toEqual([])
 })
 
 test('demo flow works offline and has no serious accessibility violations', async ({ page }) => {

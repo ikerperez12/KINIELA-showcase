@@ -34,7 +34,11 @@ KINIELA es un juego social de pronósticos de fútbol. Cada jornada se convierte
 
 ![Pick, save and review demo flow](public/gallery/predict-save-review.gif)
 
-The gallery uses invented fixtures and sample profiles. No production account, match feed or private service is connected. See the [gallery notes](docs/GALLERY.md) for the image list and demo flow.
+### Real product walkthrough
+
+<video controls preload="metadata" poster="public/gallery/kiniela-original-app-poster.jpg" src="public/gallery/kiniela-original-app-trailer.mp4"></video>
+
+This short walkthrough contains only real visual captures of the original KINIELA application, approved by the owner for this gallery. It is a static media asset: the showcase does not connect to the production application. The interactive demo and editorial stills continue to use invented fixtures and sample profiles. See the [gallery notes](docs/GALLERY.md) for the asset list and review boundary.
 
 ## Matchday experience
 
@@ -114,7 +118,7 @@ This is a **public-source showcase, not an open-source release**. Copyright © 2
 
 ## Credits
 
-The hero artwork was created specifically for this showcase. No real teams, players, match calendars, official badges or production data are included. See [ATTRIBUTION.md](ATTRIBUTION.md).
+The hero artwork and interactive demo were created specifically for this showcase and use synthetic fixtures. The approved trailer is the only real-product media asset. See [ATTRIBUTION.md](ATTRIBUTION.md).
 
 <div align="center">
   <p><strong>PLAY NOW</strong> — the canonical game URL will be added after owner confirmation.</p>

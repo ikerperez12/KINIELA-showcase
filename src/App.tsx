@@ -21,6 +21,8 @@ const copy = {
     streak: 'Racha de demo', streakValue: '3 jornadas', badges: 'Logros de ejemplo', badgesValue: '2 desbloqueados',
     galleryEyebrow: 'HECHO PARA VERSE BIEN EN CUALQUIER PANTALLA', galleryTitle: 'La jornada te acompaña.',
     galleryText: 'Una experiencia pensada para consultar, pronosticar y volver a la clasificación desde el móvil o el escritorio.',
+    trailerEyebrow: 'CAPTURA REAL DEL PRODUCTO', trailerTitle: 'Así se siente una jornada.',
+    trailerText: 'Un recorrido visual por la aplicación original. El vídeo muestra únicamente pantallas reales capturadas para esta galería; no conecta con servicios desde el showcase.', trailerNote: 'Vídeo de producto · 21 s',
     includedTitle: 'Una base pequeña, hecha para enseñar.', includedText: 'Componentes tipados, fixtures locales y un resultado de demo precalculado para mostrar el flujo de interfaz.',
     privacyTitle: 'El producto completo sigue privado.', privacyText: 'El motor real, el backend, los datos, la seguridad, las operaciones y una parte sustancial de KINIELA no forman parte de este showcase.',
     footerLine: 'Acierta. Afina. Pica a tus amigos.', footerTerms: 'Galería pública y referencia limitada. Demo sintética, sin conexión a producción.',
@@ -42,6 +44,8 @@ const copy = {
     streak: 'Demo streak', streakValue: '3 matchdays', badges: 'Sample achievements', badgesValue: '2 unlocked',
     galleryEyebrow: 'MADE TO LOOK GREAT ON EVERY SCREEN', galleryTitle: 'Your matchday goes with you.',
     galleryText: 'An experience made for checking in, making picks and returning to the leaderboard from phone or desktop.',
+    trailerEyebrow: 'REAL PRODUCT CAPTURE', trailerTitle: 'See a matchday in motion.',
+    trailerText: 'A visual walk through the original application. This video contains only real screens captured for the gallery; the showcase itself does not connect to production services.', trailerNote: 'Product video · 21 sec',
     includedTitle: 'A small foundation, made to show how.', includedText: 'Typed components, local fixtures and a precomputed demo outcome that shows the interface flow.',
     privacyTitle: 'The full product stays private.', privacyText: 'The real engine, backend, data, security, operations and a substantial part of KINIELA are not part of this showcase.',
     footerLine: 'Call it. Refine it. Rival your friends.', footerTerms: 'Public gallery and limited reference. Synthetic demo, disconnected from production.',
@@ -151,6 +155,11 @@ function App() {
         <section aria-labelledby="gallery-title" className="gallery-banner">
           <div className="gallery-photo"><img alt="" loading="lazy" src="/brand/kiniela-pitch-editorial.webp" /></div>
           <div className="gallery-copy"><p className="eyebrow"><span className="section-number">05 /</span> {t.galleryEyebrow}</p><h2 id="gallery-title">{t.galleryTitle}</h2><p>{t.galleryText}</p><a className="text-link text-link-dark" href="#demo">{locale === 'es' ? 'Ver la demo' : 'See the demo'} <ArrowMark /></a></div>
+        </section>
+
+        <section aria-labelledby="trailer-title" className="section trailer-section">
+          <div className="trailer-copy"><p className="eyebrow"><span className="section-number">06 /</span> {t.trailerEyebrow}</p><h2 id="trailer-title">{t.trailerTitle}</h2><p>{t.trailerText}</p><small>{t.trailerNote}</small></div>
+          <div className="trailer-frame"><video controls preload="metadata" poster="/gallery/kiniela-original-app-poster.jpg"><source src="/gallery/kiniela-original-app-trailer.mp4" type="video/mp4" />{locale === 'es' ? 'Tu navegador no puede reproducir este vídeo.' : 'Your browser cannot play this video.'}</video></div>
         </section>
 
         <section className="section boundary-section" aria-labelledby="included-title">

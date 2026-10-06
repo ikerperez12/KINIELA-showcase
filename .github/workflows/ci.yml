@@ -34,6 +34,14 @@ jobs:
       - run: npm run build
       - name: Scan production build output
         run: npm run check:forbidden
+      - uses: actions/setup-go@d35c59abb061a4a6fb18e82ac0862c26744d6ab5 # v5.5.0
+        with:
+          go-version: '1.26.5'
+      - run: go install github.com/zricethezav/gitleaks/v8@v8.30.1
+      - name: Scan bundled JavaScript, styles, and maps for secrets
+        run: gitleaks dir dist/assets --redact --verbose
+      - name: Scan built HTML for secrets
+        run: gitleaks dir dist/index.html --redact --verbose
       - run: npm audit
       - run: npm audit --omit=dev
       - run: npx playwright install --with-deps chromium

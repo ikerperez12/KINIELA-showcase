@@ -1,6 +1,6 @@
 # Gallery
 
-All names, matches, standings and profile details in these visuals are fictional. The artwork was created specifically for this repository. No production dashboards, user accounts, real match calendars or official team badges are shown.
+The editorial stills, demo fixtures, standings and profile details in this repository are fictional. The artwork was created specifically for this repository. The approved product trailer is the one deliberate exception: it contains real visual captures of the original KINIELA application and no interactive connection to production.
 
 ## Screens
 
@@ -14,6 +14,8 @@ All names, matches, standings and profile details in these visuals are fictional
 | <code>public/gallery/profile-stats.png</code> | Sample profile | Fictional streak and achievement preview |
 | <code>public/gallery/predict-save-review.gif</code> | Pick, save and review flow | Demo user picks three outcomes, saves them and reviews a precomputed example |
 | <code>public/gallery/showcase-social.png</code> | Social preview | KINIELA editorial football-pitch artwork and showcase title |
+| <code>public/gallery/kiniela-original-app-trailer.mp4</code> | Real product walkthrough | Owner-approved captures of the original app, with no production connection from this repository |
+| <code>public/gallery/kiniela-original-app-poster.jpg</code> | Trailer poster | Real original-app capture used as the video poster |
 
 ## Review checklist
 
@@ -21,3 +23,4 @@ All names, matches, standings and profile details in these visuals are fictional
 - Keep DevTools, browser URLs, account identifiers and personal data out of captures.
 - Check image metadata and filenames before adding assets.
 - Record the asset origin and rights in <code>ATTRIBUTION.md</code>.
+- Keep the real product trailer as a self-contained media asset; do not add API calls, embeds, credentials or user data around it.

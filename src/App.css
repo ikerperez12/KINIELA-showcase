@@ -138,6 +138,13 @@ h1, h2, h3, p { margin-top: 0; }
 .gallery-copy > p:not(.eyebrow) { max-width: 400px; margin-bottom: 24px; color: #4c5a50; font-size: 12px; line-height: 1.75; }
 .text-link-dark { color: var(--ink); }
 
+.trailer-section { padding-top: 112px; padding-bottom: 116px; display: grid; grid-template-columns: .72fr 1.28fr; gap: clamp(34px, 8vw, 112px); align-items: center; }
+.trailer-copy h2 { max-width: 460px; margin-bottom: 18px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(39px, 5vw, 62px); font-weight: 500; letter-spacing: -.06em; line-height: .99; }
+.trailer-copy > p:not(.eyebrow) { max-width: 365px; margin-bottom: 18px; color: #58665d; font-size: 13px; line-height: 1.75; }
+.trailer-copy small { color: #91452f; font-size: 9px; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+.trailer-frame { overflow: hidden; background: var(--deep); box-shadow: 14px 16px 0 #e3ddcf; }
+.trailer-frame video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+
 .boundary-section { padding-top: 96px; padding-bottom: 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--paper); }
 .boundary-block { min-height: 325px; padding: 31px clamp(24px, 4vw, 50px); background: var(--paper); }
 .boundary-index { display: block; margin-bottom: 37px; color: #536158; font-size: 8px; font-weight: 900; letter-spacing: .16em; }
@@ -167,6 +174,7 @@ h1, h2, h3, p { margin-top: 0; }
   .fixture-teams { font-size: 10px; }
   .progress-section { gap: 48px; }
   .gallery-copy { padding: 38px; }
+  .trailer-section { gap: 42px; }
 }
 @media (max-width: 680px) {
   html { scroll-padding-top: 65px; }
@@ -223,6 +231,9 @@ h1, h2, h3, p { margin-top: 0; }
   .gallery-banner { grid-template-columns: 1fr; }
   .gallery-photo, .gallery-photo img { min-height: 230px; max-height: 260px; }
   .gallery-copy { padding: 34px 24px 39px; }
+  .trailer-section { padding-top: 75px; padding-bottom: 80px; grid-template-columns: 1fr; gap: 30px; }
+  .trailer-copy > p:not(.eyebrow) { font-size: 12px; }
+  .trailer-frame { box-shadow: 8px 9px 0 #e3ddcf; }
   .boundary-section { padding-top: 70px; padding-bottom: 70px; grid-template-columns: 1fr; gap: 1px; }
   .boundary-block { min-height: unset; padding: 25px 22px 30px; }
   .boundary-index { margin-bottom: 25px; }

@@ -16,6 +16,7 @@ jobs:
   analyze:
     permissions:
       contents: read
+      actions: read
       security-events: write
     runs-on: ubuntu-latest
     timeout-minutes: 20

@@ -4,7 +4,7 @@ import process from 'node:process'
 
 const root = process.cwd()
 const ignored = new Set(['.git', 'node_modules', 'coverage', 'playwright-report', 'test-results'])
-const textExtensions = new Set(['.css', '.html', '.js', '.json', '.md', '.mjs', '.svg', '.ts', '.tsx', '.txt', '.yml', '.yaml'])
+const textExtensions = new Set(['.css', '.html', '.js', '.json', '.map', '.md', '.mjs', '.svg', '.ts', '.tsx', '.txt', '.yml', '.yaml'])
 const forbidden = [
   ['supa', 'base'].join(''),
   ['ver', 'cel'].join(''),

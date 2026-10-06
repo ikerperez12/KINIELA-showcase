@@ -25,12 +25,15 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run check:forbidden
+      - name: Scan source and configuration
+        run: npm run check:forbidden
       - run: npm run check:links
       - run: npm run lint
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
+      - name: Scan production build output
+        run: npm run check:forbidden
       - run: npm audit
       - run: npm audit --omit=dev
       - run: npx playwright install --with-deps chromium

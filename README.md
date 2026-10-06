@@ -68,7 +68,7 @@ Competitive state in the production game is decided by protected services. This 
 
 ## Run the showcase
 
-Requirements: Node.js 22 and npm.
+Requirements: Node.js 24 and npm.
 
 <pre><code>npm ci
 npm run dev</code></pre>

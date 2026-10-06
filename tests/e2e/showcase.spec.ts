@@ -1,13 +1,16 @@
 import AxeBuilder from '@axe-core/playwright'
-import { expect, test } from '@playwright/test'
+import { expect, test, type Page } from '@playwright/test'
 
-test('demo flow works offline and has no serious accessibility violations', async ({ page }) => {
+const isolatedOrigin = 'http://127.0.0.1:4173'
+const unexpectedRequestsByPage = new WeakMap<Page, string[]>()
+
+test.beforeEach(async ({ page }) => {
   const unexpectedRequests: string[] = []
-  const localOrigin = 'http://127.0.0.1:4173'
+  unexpectedRequestsByPage.set(page, unexpectedRequests)
 
   await page.route('**/*', async (route) => {
     const url = new URL(route.request().url())
-    if (url.protocol.startsWith('http') && url.origin !== localOrigin) {
+    if ((url.protocol === 'http:' || url.protocol === 'https:') && url.origin !== isolatedOrigin) {
       unexpectedRequests.push(url.href)
       await route.abort()
       return
@@ -15,11 +18,17 @@ test('demo flow works offline and has no serious accessibility violations', asyn
     await route.continue()
   })
   page.on('websocket', (socket) => unexpectedRequests.push(socket.url()))
+})
 
+test.afterEach(async ({ page }) => {
+  await expect(page.locator('iframe')).toHaveCount(0)
+  expect(unexpectedRequestsByPage.get(page) ?? []).toEqual([])
+})
+
+test('demo flow works offline and has no serious accessibility violations', async ({ page }) => {
   await page.goto('/')
   await expect(page.getByRole('heading', { name: /Acierta\./ })).toBeVisible()
   await expect(page.getByRole('button', { name: 'Play now ↗' })).toBeDisabled()
-  await expect(page.locator('iframe')).toHaveCount(0)
   await expect(page.getByText('Puerto Brisa')).toBeVisible()
   await expect(page.getByRole('button', { name: 'Guardar pronósticos' })).toBeDisabled()
 
@@ -39,21 +48,9 @@ test('demo flow works offline and has no serious accessibility violations', asyn
     console.log('Axe contrast findings:', JSON.stringify([...new Map(contrastPairs.map((finding) => [`${finding.data?.fgColor}:${finding.data?.bgColor}`, finding])).values()]))
   }
   expect(accessibility.violations).toEqual([])
-  expect(unexpectedRequests).toEqual([])
 })
 
 test('mobile layout fits the viewport and language toggle works', async ({ page }) => {
-  const unexpectedRequests: string[] = []
-  await page.route('**/*', async (route) => {
-    const url = new URL(route.request().url())
-    if (url.protocol.startsWith('http') && url.origin !== 'http://127.0.0.1:4173') {
-      unexpectedRequests.push(url.href)
-      await route.abort()
-      return
-    }
-    await route.continue()
-  })
-  page.on('websocket', (socket) => unexpectedRequests.push(socket.url()))
   await page.setViewportSize({ width: 320, height: 844 })
   await page.goto('/')
   await expect(page.getByRole('heading', { name: /Acierta\./ })).toBeVisible()
@@ -64,7 +61,6 @@ test('mobile layout fits the viewport and language toggle works', async ({ page 
   expect(width).toBeLessThanOrEqual(320)
   const accessibility = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze()
   expect(accessibility.violations).toEqual([])
-  expect(unexpectedRequests).toEqual([])
 })
 
 test('keyboard users can skip the navigation and reach the main content', async ({ page }) => {

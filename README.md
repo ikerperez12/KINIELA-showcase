@@ -18,13 +18,37 @@ KINIELA is a social football prediction game built around matchday competition, 
 
 KINIELA es un juego social de pronósticos de fútbol. Cada jornada se convierte en una excusa para competir con amigos, seguir una clasificación y lanzar retos cara a cara.
 
-## Screenshots
+## Real app: a matchday, end to end
+
+Captures of the running KINIELA app in guest mode: no account, no backend, predictions kept on the device. They come from a local production build, not from the hosted game.
+
+<video controls preload="metadata" poster="public/gallery/kiniela-walkthrough-guest-poster.jpg" src="public/gallery/kiniela-walkthrough-guest.mp4" width="100%"></video>
+
+*Walkthrough (44 s): home, a full matchday of 1 / X / 2 picks with scorelines, saving as a guest, and the profile page.*
+
+| Home | Picks | Saved |
+| --- | --- | --- |
+| ![KINIELA home in guest mode](public/gallery/guest-home-desktop.png) | ![Ten predictions entered on one matchday](public/gallery/guest-picks-desktop.png) | ![Predictions saved as a guest](public/gallery/guest-saved-desktop.png) |
+
+| Mobile home | Mobile saved |
+| --- | --- |
+| ![KINIELA home on a phone-sized viewport](public/gallery/guest-home-mobile.png) | ![Saved matchday on a phone-sized viewport](public/gallery/guest-saved-mobile.png) |
+
+![Matchday cards with saved predictions](public/gallery/guest-matchday-desktop.png)
+
+## Original app trailer
+
+<video controls preload="metadata" poster="public/gallery/kiniela-original-app-poster.jpg" src="public/gallery/kiniela-original-app-trailer.mp4"></video>
+
+Owner-approved captures of the original application, kept as a self-contained media file. The showcase does not connect to the production application.
+
+## Interactive demo stills
+
+These images come from the showcase's own demo, which uses invented fixtures and sample profiles:
 
 ![Interactive fictional matchday and leaderboard](public/gallery/showcase-desktop.png)
 
 ![Responsive mobile showcase](public/gallery/showcase-mobile.png)
-
-![Interactive fictional matchday](public/gallery/matchday-desktop.png)
 
 ![Fictional group leaderboard](public/gallery/leaderboard-desktop.png)
 
@@ -34,11 +58,7 @@ KINIELA es un juego social de pronósticos de fútbol. Cada jornada se convierte
 
 ![Pick, save and review demo flow](public/gallery/predict-save-review.gif)
 
-### Real product walkthrough
-
-<video controls preload="metadata" poster="public/gallery/kiniela-original-app-poster.jpg" src="public/gallery/kiniela-original-app-trailer.mp4"></video>
-
-This short walkthrough contains only real visual captures of the original KINIELA application, approved by the owner for this gallery. It is a static media asset: the showcase does not connect to the production application. The interactive demo and editorial stills continue to use invented fixtures and sample profiles. See the [gallery notes](docs/GALLERY.md) for the asset list and review boundary.
+See the [gallery notes](docs/GALLERY.md) for the asset list and review boundary.
 
 ## Matchday experience
 

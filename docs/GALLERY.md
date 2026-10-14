@@ -30,9 +30,9 @@ The editorial stills, demo fixtures, standings and profile details in this repos
 These captures are the owner's requested exception to the synthetic-only gallery. Before publication:
 
 - Captured from a local production build in guest mode, with no account, no backend and no production connection.
-- The matchday shows the official 2026-27 fixtures as loaded by the app's seed data. The policy in [PUBLIC_CONTENT_POLICY.md](PUBLIC_CONTENT_POLICY.md) lists complete match calendars and provider datasets as never-add items, so the owner must confirm this exception.
+- The matchday shows the official 2026-27 fixtures as loaded by the app's seed data. The policy in [PUBLIC_CONTENT_POLICY.md](PUBLIC_CONTENT_POLICY.md) lists complete match calendars and provider datasets as never-add items. The owner approved this exception on 2026-10-14.
 - The Liga and Copa pages in guest mode render internal setup instructions. They are excluded from every capture.
-- Owner sign-off and a separate rights and privacy review are still open.
+- Owner approval of the exception: granted 2026-10-14. Separate rights and privacy review: still open.
 
 ## Review checklist
 

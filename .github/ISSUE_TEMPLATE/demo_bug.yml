@@ -1,0 +1,24 @@
+name: Showcase demo bug
+description: Report an issue limited to this public gallery or clean-room demo.
+title: "[Demo] "
+body:
+  - type: markdown
+    attributes:
+      value: Please do not include production endpoints, private data, credentials, or security details.
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: Describe the showcase behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and viewport

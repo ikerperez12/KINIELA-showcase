@@ -1,7 +1,5 @@
 Copyright © 2026 Iker Pérez. All rights reserved.
 
-This repository is a restricted-use public showcase, not an open-source release. The production application and its proprietary systems are not included.
+Este repositorio es una galería pública restringida, no un proyecto de código abierto. Contiene capturas y vídeos reales de la aplicación KINIELA. No contiene el código de la aplicación ni datos de producción.
 
-The original football-pitch illustration and showcase UI were created specifically for this repository. Fictional names, groups, fixtures, profile values and demo outcomes are synthetic. The product trailer, its poster, the guest-mode screenshots and the guest-mode walkthrough are owner-approved visual captures of the original KINIELA application. They are provided for gallery viewing only.
-
-React, TypeScript, Vite, Playwright, Vitest, Axe and other third-party packages retain their respective names, copyrights and licenses. Their package metadata and upstream notices govern those components.
+Los escudos, marcas y nombres de equipos y jugadores que aparecen en las capturas pertenecen a sus titulares y se muestran como parte de la interfaz real.

@@ -1,27 +1,11 @@
-name: Showcase improvement
-description: Suggest an improvement to the gallery or isolated demo.
-title: "[showcase] "
+name: Feature request
+description: Suggest an improvement to the gallery or its documentation.
+labels: [enhancement]
 body:
-  - type: markdown
-    attributes:
-      value: Suggestions are limited to gallery UI, accessibility, translations, documentation, tests, and demo behavior. Do not request production integrations or private game logic.
   - type: textarea
-    id: problem
+    id: idea
     attributes:
-      label: What should improve?
-      description: Describe the showcase problem or opportunity.
+      label: Suggestion
+      description: Gallery layout, documentation, accessibility of the media, or checks. Do not request production integrations or private game logic.
     validations:
       required: true
-  - type: textarea
-    id: suggestion
-    attributes:
-      label: Suggested change
-    validations:
-      required: true
-  - type: checkboxes
-    id: scope
-    attributes:
-      label: Scope confirmation
-      options:
-        - label: This suggestion does not require production APIs, data, rules, or backend behavior.
-          required: true

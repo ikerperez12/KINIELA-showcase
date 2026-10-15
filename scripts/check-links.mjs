@@ -19,7 +19,7 @@ await walk(root)
 const broken = []
 const destinations = [
   /!?\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)/g,
-  /\b(?:src|href)="([^"]+)"/g,
+  /\b(?:src|href|poster)="([^"]+)"/g,
 ]
 
 for (const file of markdownFiles) {

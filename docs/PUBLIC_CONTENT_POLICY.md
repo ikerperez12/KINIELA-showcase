@@ -1,28 +1,26 @@
-# Public content policy
+# Política de contenido público
 
-This repository is a visual gallery and a limited clean-room reference implementation. It is not the production game and must not become a client for production services.
+Este repositorio es una galería de medios. No es el juego ni contiene su código.
 
-## Allowed
+## Permitido
 
-- Product name and player-facing descriptions.
-- Original gallery artwork and UI created for this showcase.
-- Invented fixtures, players, groups, standings and precomputed demonstration outcomes.
-- Owner-approved real product captures included as self-contained gallery media (the product trailer and the guest-mode captures), after a separate rights and privacy review.
-- Generic engineering patterns that do not disclose production contracts or structure.
-- Documentation, translations, accessibility fixes and tests for the showcase.
+- Capturas y vídeos reales de la aplicación, sin cuentas ni datos personales.
+- Descripción del producto a nivel de jugador.
+- Marca y favicon de KINIELA.
+- Documentación, atribución y las comprobaciones de este repositorio.
 
-## Never add
+## No permitido
 
-- Production scoring, rules, formulas, private test vectors or implementation identifiers.
-- Production APIs, database models, authorization policies, service credentials or secrets.
-- Ingestion, scheduled operations, administration, deployment or infrastructure details.
-- Real user data, provider datasets, complete match calendars, unlicensed team marks or private screenshots.
-- Local author paths, editor/agent history, logs, terminal captures or production telemetry.
+- Código fuente, configuración, rutas o componentes de la aplicación.
+- Credenciales, claves, variables de entorno o identificadores de infraestructura.
+- Datos de usuarios, correos, identificadores de cuenta o capturas de paneles de administración.
+- Instrucciones internas de configuración o registros de desarrollo.
+- Rutas de archivos locales.
+- Audio de grabaciones (se eliminan antes de publicar).
 
-## Demo boundary
+## Aprobaciones registradas
 
-The demo uses local synthetic fixtures and a precomputed outcome. It makes no API, database, authentication, analytics, websocket or production service calls. A future Play Now control may only be a direct outbound link to the canonical game URL confirmed by the owner; it must not embed, proxy or programmatically call the game.
+- **2026-10-14:** el propietario aprobó capturas reales de la aplicación en modo invitado, incluida una jornada completa con fixtures oficiales de LALIGA 2026-27 cargados por la aplicación.
+- **2026-10-15:** el propietario aprobó la reorganización de la galería en carpetas y la eliminación de todo el material ficticio y del código de la aplicación.
 
-Every file and asset added to this repository needs a clean-room origin and a reason to be public. If provenance or rights are uncertain, omit it.
-
-The approved product trailer is a bounded visual exception to the clean-room rule. It is not source code, does not contain account identifiers or operational screens, and must never become a route to production services.
+Pendiente antes de publicar el repositorio: revisión de derechos de imagen de escudos y nombres de jugadores (ver [ATTRIBUTION.md](../ATTRIBUTION.md)).

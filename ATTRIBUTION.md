@@ -1,10 +1,10 @@
-# Attribution
+# Atribución
 
-- **KINIELA wordmark and page design:** created specifically for this showcase by Iker Pérez.
-- **Editorial football-pitch artwork:** generated specifically for this showcase with OpenAI image generation. It contains no team marks, real players, sponsors or text.
-- **Fixtures, teams, players, groups, standings, points and achievements:** fictional synthetic examples created for this demo.
-- **Real product walkthrough:** `public/gallery/kiniela-original-app-trailer.mp4` and its poster are owner-approved captures of the original KINIELA application, rendered for this showcase. They are included as visual media only and do not expose an API connection, account data or production credentials.
-- **Guest-mode gameplay captures and walkthrough:** `public/gallery/guest-*.png`, `public/gallery/kiniela-walkthrough-guest.mp4` and its poster were captured on 13 Oct 2026 from a local production build of the original KINIELA application, in guest mode with no account, no backend and no production connection. They show the official 2026-27 season fixtures as loaded by the app's seed data, so they fall under the real-capture review in [docs/GALLERY.md](docs/GALLERY.md). The owner approved this exception on 2026-10-14; a separate rights and privacy review remains open.
-- **Third-party software:** see dependency package metadata for upstream authors and licenses. No third-party sports photos, calendars or roster datasets are bundled separately; any real football visuals appear only inside the owner-approved product capture.
+- **Capturas de la aplicación KINIELA** (`media/images/`): tomadas de la aplicación en funcionamiento, en escritorio y móvil. Ver el inventario en [docs/GALLERY.md](docs/GALLERY.md).
+- **Vídeo de recorrido** (`media/videos/recorrido/`): grabación de pantalla de la aplicación, sin audio.
+- **Tráiler original** (`media/videos/trailer-original/`): capturas aprobadas de la aplicación original.
+- **Marca y favicon** (`media/brand/favicon.svg`): diseño original de KINIELA.
+- **Equipos, escudos y jugadores que aparecen en las capturas:** pertenecen a sus titulares. Sus nombres y escudos aparecen solo como parte de la interfaz real del juego. Se requiere revisión de derechos antes de publicar el repositorio.
+- **Herramientas de comprobación** (`scripts/`, `tests/`): sin dependencias externas.
 
-All included material is subject to [LICENSE.md](LICENSE.md), except third-party components whose own licenses apply.
+Todo el material está sujeto a [LICENSE.md](LICENSE.md).

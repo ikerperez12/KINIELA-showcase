@@ -1,7 +1,5 @@
-# Security policy
+# Política de seguridad
 
-This repository contains only the public gallery and isolated clean-room demo. It has no production credentials, backend connection or account system.
+Este repositorio contiene solo medios (imágenes, vídeos) y documentación. No contiene código de la aplicación, credenciales ni conexiones a servicios.
 
-Do not post suspected vulnerabilities, exploit details, private endpoints, credentials or production data in Issues or Discussions. Use GitHub's private vulnerability reporting for this repository when it is enabled. If private reporting is unavailable, contact the repository owner through their GitHub profile without publishing technical details.
-
-Reports should cover this showcase or its demo only. Production security reports must not include personal data or secrets in public channels.
+No publiques posibles vulnerabilidades en *Issues* ni en *Discussions*. Usa la notificación privada de vulnerabilidades de GitHub cuando esté activa para este repositorio. Si no lo está, contacta con el propietario a través de su perfil de GitHub sin incluir detalles técnicos públicamente.

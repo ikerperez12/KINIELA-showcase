@@ -1,145 +1,91 @@
 <div align="center">
-  <img src="public/brand/favicon.svg" width="54" height="54" alt="" />
+  <img src="media/brand/favicon.svg" width="56" height="56" alt="" />
   <h1>KINIELA</h1>
   <p><strong>Acierta. Afina. Pica a tus amigos.</strong></p>
-  <p><strong>PLAY NOW</strong> — pendiente de confirmar por el propietario la URL canónica del juego.</p>
+  <p>Juego social de pronósticos de LALIGA: una quiniela, muchas competiciones.</p>
 </div>
 
-![KINIELA showcase desktop preview](public/gallery/showcase-desktop.png)
+---
 
-> **Public Showcase / Limited Reference Implementation**  
-> This repository is a product gallery and a limited clean-room reference implementation created for demonstration. It does not contain the complete production application. The production scoring engine, backend, data model, security and abuse-prevention systems, integrations, operations, and a substantial portion of KINIELA remain private.
+> **Galería pública.** Este repositorio reúne capturas y vídeos reales de KINIELA. No contiene el código de la aplicación, ni datos, ni configuración de servicios. Juega ahora: *URL canónica pendiente de confirmación por el propietario.*
 >
-> **Galería pública / Implementación de referencia limitada.** Este repositorio muestra el producto e incluye una demo de referencia limitada creada desde cero. No contiene la aplicación de producción completa. El motor de puntuación, backend, modelo de datos, seguridad, prevención de abusos, integraciones, operaciones y una parte sustancial de KINIELA permanecen privados.
+> **Public gallery.** This repository holds real screenshots and videos of KINIELA. It contains no application source, data or service configuration.
 
-## The game
+## Qué es KINIELA
 
-KINIELA is a social football prediction game built around matchday competition, groups, rankings and head-to-head challenges. Make predictions, compare them with friends, and follow a season together.
+Cada jornada haces **10 pronósticos**: `1 / X / 2` más marcador y goleador. Esos mismos pronósticos alimentan la clasificación general, el campeón de jornada, una liga cara a cara (H2H), una copa eliminatoria y tus estadísticas. No hay que alinear a nadie ni fichar: basta con predecir y comparar.
 
-KINIELA es un juego social de pronósticos de fútbol. Cada jornada se convierte en una excusa para competir con amigos, seguir una clasificación y lanzar retos cara a cara.
+## Galería
 
-## Real app: a matchday, end to end
+Todo el material está en [`media/`](media/), ordenado por pantalla.
 
-Captures of the running KINIELA app in guest mode: no account, no backend, predictions kept on the device. They come from a local production build, not from the hosted game.
+### Inicio
 
-<video controls preload="metadata" poster="public/gallery/kiniela-walkthrough-guest-poster.jpg" src="public/gallery/kiniela-walkthrough-guest.mp4" width="100%"></video>
-
-*Walkthrough (44 s): home, a full matchday of 1 / X / 2 picks with scorelines, saving as a guest, and the profile page.*
-
-| Home | Picks | Saved |
-| --- | --- | --- |
-| ![KINIELA home in guest mode](public/gallery/guest-home-desktop.png) | ![Ten predictions entered on one matchday](public/gallery/guest-picks-desktop.png) | ![Predictions saved as a guest](public/gallery/guest-saved-desktop.png) |
-
-| Mobile home | Mobile saved |
+| Escritorio | Móvil |
 | --- | --- |
-| ![KINIELA home on a phone-sized viewport](public/gallery/guest-home-mobile.png) | ![Saved matchday on a phone-sized viewport](public/gallery/guest-saved-mobile.png) |
+| ![Pantalla de inicio de KINIELA en escritorio](media/images/inicio/inicio-escritorio.png) | ![Pantalla de inicio de KINIELA en móvil](media/images/inicio/inicio-movil.png) |
 
-![Matchday cards with saved predictions](public/gallery/guest-matchday-desktop.png)
+### Jornada
 
-## Original app trailer
+| Pronósticos introducidos | Guardada en escritorio | Guardada en móvil |
+| --- | --- | --- |
+| ![Jornada con pronósticos introducidos](media/images/jornada/jornada-pronosticos-escritorio.png) | ![Jornada guardada en escritorio](media/images/jornada/jornada-guardada-escritorio.png) | ![Jornada guardada en móvil](media/images/jornada/jornada-guardada-movil.png) |
 
-<video controls preload="metadata" poster="public/gallery/kiniela-original-app-poster.jpg" src="public/gallery/kiniela-original-app-trailer.mp4"></video>
+### Vídeos
 
-Owner-approved captures of the original application, kept as a self-contained media file. The showcase does not connect to the production application.
+**Recorrido de la aplicación (≈ 1 min, sin audio).** Inicio, una jornada completa, goles en directo y la sección Mi liga.
 
-## Interactive demo stills
+<video controls preload="metadata" poster="media/videos/recorrido/kiniela-recorrido-poster.jpg" src="media/videos/recorrido/kiniela-recorrido.mp4" width="360"></video>
 
-These images come from the showcase's own demo, which uses invented fixtures and sample profiles:
+**Tráiler original.** Capturas aprobadas de la aplicación original.
 
-![Interactive fictional matchday and leaderboard](public/gallery/showcase-desktop.png)
+<video controls preload="metadata" poster="media/videos/trailer-original/kiniela-trailer-original-poster.jpg" src="media/videos/trailer-original/kiniela-trailer-original.mp4" width="100%"></video>
 
-![Responsive mobile showcase](public/gallery/showcase-mobile.png)
+## Estructura del repositorio
 
-![Fictional group leaderboard](public/gallery/leaderboard-desktop.png)
+```text
+media/
+  brand/                 marca (favicon)
+  images/
+    inicio/              pantalla de inicio, escritorio y móvil
+    jornada/             pronósticos y estado guardado
+  videos/
+    recorrido/           recorrido completo de la aplicación
+    trailer-original/    tráiler aprobado de la aplicación original
+docs/
+  GALLERY.md             inventario de cada archivo y su origen
+  PUBLIC_CONTENT_POLICY.md  qué puede y qué no puede publicarse
+scripts/                 comprobaciones sin dependencias (contenido, enlaces, medios)
+tests/                   pruebas del escáner de contenido
+.github/                 CI: verificación, escaneo de secretos y CodeQL
+```
 
-![Groups, head-to-head and cup modes](public/gallery/competition-modes.png)
+## Qué no contiene
 
-![Synthetic profile and progress preview](public/gallery/profile-stats.png)
+- Código fuente de la aplicación, ni componentes, ni rutas, ni base de datos.
+- Credenciales, claves, variables de entorno o identificadores de infraestructura.
+- Datos de usuarios ni resultados de competiciones fuera de las capturas aprobadas.
 
-![Pick, save and review demo flow](public/gallery/predict-save-review.gif)
+## Verificación
 
-See the [gallery notes](docs/GALLERY.md) for the asset list and review boundary.
+No hace falta instalar nada más que Node.js 24:
 
-## Matchday experience
+```bash
+npm run check
+```
 
-Choose a 1, X or 2 outcome for three fictional fixtures, save locally in the page state, and review a precalculated demo outcome. Its display points and explanation are illustrative only; they do not describe or calculate production scoring.
+Ejecuta el escáner de contenido prohibido, la comprobación de enlaces, la validación de la biblioteca de medios y las pruebas. El mismo conjunto corre en CI en cada cambio.
 
-## Groups, H2H & Cup
+## Licencia y atribución
 
-The product experience includes social groups, head-to-head challenges and cup competition. This showcase describes those player-facing modes without publishing their production rules or implementation.
+Repositorio público de muestra, no de código abierto. Copyright © 2026 Iker Pérez. Todos los derechos reservados. Consulta [LICENSE.md](LICENSE.md), [NOTICE.md](NOTICE.md) y [ATTRIBUTION.md](ATTRIBUTION.md).
 
-## Stats & progress
+## Seguridad
 
-The page includes sample standings, fictional profile details, a streak preview and sample achievements. Every name and value shown in the demo is synthetic.
+Si encuentras un problema de seguridad, no lo publiques en *Issues*. Usa la notificación privada de vulnerabilidades del repositorio; detalles en [SECURITY.md](SECURITY.md).
 
-## Engineering showcase
-
-The reference app uses strict TypeScript, small React components, accessible HTML controls, local fixtures, a reducer for demo UI state, unit tests, Playwright, accessibility checks and a CI pipeline. Its architecture is documented at [docs/ENGINEERING_OVERVIEW.md](docs/ENGINEERING_OVERVIEW.md).
-
-## Demo architecture
-
-<pre><code>Player
-  ↓
-Showcase UI
-  ↓
-Demo UI state
-  ↓
-Demo service interface
-  ↓
-Local fixture adapter → synthetic fixtures and precomputed outcome</code></pre>
-
-Competitive state in the production game is decided by protected services. This public demo uses local synthetic fixtures and does not connect to production.
-
-## Run the showcase
-
-Requirements: Node.js 24 and npm.
-
-<pre><code>npm ci
-npm run dev</code></pre>
-
-The demo needs no environment file, account, API, database or external service. To run checks:
-
-<pre><code>npm run lint
-npm run typecheck
-npm test
-npm run build
-npx playwright install chromium
-npm run test:e2e
-npm run check:forbidden
-npm run check:links
-npm audit</code></pre>
-
-## What is included
-
-- A responsive product gallery with fictional profiles and fixtures.
-- A limited, local-only prediction flow with a precomputed example outcome.
-- Reusable presentation components, accessible controls and Spanish/English interface copy.
-- Unit tests, browser tests, offline network checks, secret scanning and static analysis workflows.
-
-## What is intentionally private
-
-- Production scoring engine, formulas, rules and private test vectors.
-- Production backend, database schema, policies and security systems.
-- Match ingestion, data providers, operational tooling and infrastructure.
-- Admin and scheduled operations, anti-abuse mechanisms and deployment details.
-- A substantial portion of the production features and application.
-
-## Security
-
-Please do not report vulnerabilities in public Issues or Discussions. Use the repository's private vulnerability reporting feature when available; see [SECURITY.md](SECURITY.md).
-
-## Contributing
-
-Contributions are limited to gallery UI, accessibility, translations, documentation and bugs in this isolated demo. Read [CONTRIBUTING.md](CONTRIBUTING.md) first.
-
-## License
-
-This is a **public-source showcase, not an open-source release**. Copyright © 2026 Iker Pérez. All rights reserved. See [LICENSE.md](LICENSE.md) and [NOTICE.md](NOTICE.md).
-
-## Credits
-
-The hero artwork and interactive demo were created specifically for this showcase and use synthetic fixtures. The approved trailer is the only real-product media asset. See [ATTRIBUTION.md](ATTRIBUTION.md).
+---
 
 <div align="center">
-  <p><strong>PLAY NOW</strong> — the canonical game URL will be added after owner confirmation.</p>
+  <p><strong>Juega ahora</strong> — URL canónica pendiente de confirmación.</p>
 </div>
